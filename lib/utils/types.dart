@@ -1,4 +1,4 @@
-enum AnimationStyle { CircularReveal, FadeIn, Still, Scale }
+enum AnimationStyles { CircularReveal, FadeIn, Still, Scale }
 
 enum Config { Default, Styled, Custom }
 

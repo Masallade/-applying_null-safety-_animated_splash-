@@ -16,7 +16,7 @@ final Sink<SplashStatus> _statusSink = _statusController.sink;
 List<SplashStatus> _splashStatusList = [];
 
 class AnimatedSplash extends StatelessWidget {
-  final AnimationStyle style;
+  final AnimationStyles style;
   final String imagePath;
   final Color backgroundColor;
   final VoidCallback onAnimationCompleted;
@@ -51,7 +51,7 @@ class AnimatedSplash extends StatelessWidget {
     );
 
     switch (style) {
-      case AnimationStyle.CircularReveal:
+      case AnimationStyles.CircularReveal:
         _child = CircularRevealSplashScreen(
           animCurve: curve,
           duration: duration,
@@ -60,7 +60,7 @@ class AnimatedSplash extends StatelessWidget {
           child: _child,
         );
         break;
-      case AnimationStyle.FadeIn:
+      case AnimationStyles.FadeIn:
         _child = FadeInSplashScreen(
           animCurve: curve,
           duration: duration,
@@ -68,13 +68,13 @@ class AnimatedSplash extends StatelessWidget {
           child: _child,
         );
         break;
-      case AnimationStyle.Still:
+      case AnimationStyles.Still:
         _addStatusEvent(SplashStatus.Animated);
         _child = StillSplashScreen(
           child: _child,
         );
         break;
-      case AnimationStyle.Scale:
+      case AnimationStyles.Scale:
         _child = ScaleSplashScreen(
           animCurve: curve,
           duration: duration,

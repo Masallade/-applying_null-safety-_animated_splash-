@@ -19,7 +19,7 @@ class MySplashScreen extends StatelessWidget {
   Widget _stillSplashExample(BuildContext context) {
     return AnimatedSplash(
       imagePath: 'assets/flutter_icon.png',
-      style: AnimationStyle.Still,
+      style: AnimationStyles.Still,
       curve: Curves.linear,
       doInBackground: doSomethingInBackground(),
       onAnimationCompleted: () {
@@ -38,7 +38,7 @@ class MySplashScreen extends StatelessWidget {
   Widget _fadeSplashExample(BuildContext context) {
     return AnimatedSplash(
       imagePath: 'assets/flutter_icon.png',
-      style: AnimationStyle.FadeIn,
+      style: AnimationStyles.FadeIn,
       curve: Curves.linear,
       doInBackground: doSomethingInBackground(),
       onAnimationCompleted: () {
@@ -51,7 +51,7 @@ class MySplashScreen extends StatelessWidget {
   Widget _circularRevealSplashExample(BuildContext context) {
     return AnimatedSplash(
       imagePath: 'assets/flutter_icon.png',
-      style: AnimationStyle.FadeIn,
+      style: AnimationStyles.FadeIn,
       curve: Curves.linear,
       backgroundColor: Colors.indigoAccent,
       doInBackground: doSomethingInBackground(),
